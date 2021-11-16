@@ -1,0 +1,67 @@
+<label class="error-message">{{ errMessage }}</label>
+<mat-form-field class="formfield"> 
+  <input [(ngModel)]="note.title" name="editTitle" matInput placeholder="Title" type="text">
+</mat-form-field>
+<mat-form-field class="formfield">
+  <textarea [(ngModel)]="note.content" name="editContent" matInput placeholder="Content"></textarea>
+</mat-form-field>
+<mat-form-field>
+<mat-select name="editStatus" placeholder="Select state" [(ngModel)]="note.state" class="formfield">
+  <mat-option *ngFor="let state of states" [value]="state">
+    {{ state }}
+  </mat-option>
+</mat-select>
+</mat-form-field>
+<mat-form-field class="formfield">
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Reminders
+      </mat-panel-title>
+      
+    </mat-expansion-panel-header>
+
+    <mat-form-field>Name
+      <input matInput [(ngModel)]="note.reminders[0].name" >
+    </mat-form-field>
+
+    <mat-form-field>Description
+      <input matInput [(ngModel)]="note.reminders[0].description">
+    </mat-form-field>
+    <mat-form-field>Type
+      <input matInput [(ngModel)]="note.reminders[0].type">
+    </mat-form-field>
+    <div style="float:right"  class="keep-c-done-wrapper mat-fab AddButton" (click)="addReminders()">Add
+   
+  </div>
+ <!-- Reminders List for a Note -->
+  <div style="overflow-y:scroll; height:150px;" [hidden]="hideGrid()">
+  <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource">
+    <ng-container matColumnDef="{{column}}" *ngFor="let column of displayedColumns">
+        <div *ngIf="column!='actions'">
+            <mat-header-cell *matHeaderCellDef> {{column}} </mat-header-cell>
+            <mat-cell *matCellDef="let reminder">
+            {{reminder[column]}}
+            </mat-cell>
+        </div>
+        <div *ngIf="column=='actions'">
+            <mat-header-cell *matHeaderCellDef> {{column}} </mat-header-cell>
+            <mat-cell *matCellDef="let reminder">
+            <mat-icon  (click)="onRemove(reminder)">remove_circle</mat-icon>
+            </mat-cell>
+         
+         </div>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns" (click)="editRow(row)"></mat-row>
+  
+</mat-table>
+</div>
+ </mat-expansion-panel>
+</mat-accordion>
+</mat-form-field>
+
+<div class="keep-c-done-wrapper">
+  <button mat-raised-button color='primary' (click)="onSave()">Save</button>
+</div>

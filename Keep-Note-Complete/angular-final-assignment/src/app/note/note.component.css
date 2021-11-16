@@ -1,0 +1,13 @@
+.note-content {
+    padding: 0;
+  }
+  
+  .note-content .mat-card-title {
+    padding: 24px 24px 0 24px;
+  }
+  
+  .note-content .mat-card-content {
+    padding: 0 24px 24px;
+    max-height: 250px;
+    overflow: auto;
+  }

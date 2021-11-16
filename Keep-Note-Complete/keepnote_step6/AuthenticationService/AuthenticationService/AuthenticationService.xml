@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AuthenticationService</name>
+    </assembly>
+    <members>
+        <member name="M:AuthenticationService.Controllers.AuthController.Register(AuthenticationService.Models.User)">
+            <summary>
+            Register new user
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AuthenticationService.Controllers.AuthController.Login(AuthenticationService.Models.User)">
+            <summary>
+            Generate the token for login 
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AuthenticationService.Models.User">
+            <summary>
+            User Model
+            </summary>
+        </member>
+        <member name="M:AuthenticationService.Repository.AuthRepository.#ctor(AuthenticationService.Models.IAuthenticationContext)">
+            <summary>
+            Construction Injuction
+            </summary>
+            <param name="_authContext"></param>
+        </member>
+        <member name="M:AuthenticationService.Repository.AuthRepository.FindUserById(System.String)">
+            <summary>
+            Find user by userId
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AuthenticationService.Repository.AuthRepository.LoginUser(System.String,System.String)">
+            <summary>
+            Will return the User details if exist
+            </summary>
+            <param name="userId"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AuthenticationService.Repository.AuthRepository.RegisterUser(AuthenticationService.Models.User)">
+            <summary>
+            Used to register new user
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AuthenticationService.Service.AuthService.LoginUser(System.String,System.String)">
+            <summary>
+            Will return User details 
+            </summary>
+            <param name="userId"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AuthenticationService.Service.AuthService.RegisterUser(AuthenticationService.Models.User)">
+            <summary>
+            Register new user
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

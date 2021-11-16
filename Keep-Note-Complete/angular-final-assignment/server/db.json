@@ -1,0 +1,76 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "title": "Read Angular5 blog",
+      "text": "Shall do at 6 pm",
+      "state": "not-started"
+    },
+    {
+      "id": 2,
+      "title": "Call Ravi",
+      "text": "Track the new submissions",
+      "state": "started"
+    },
+    {
+      "title": "Capitalism",
+      "text": "Mark Twain",
+      "id": 3,
+      "state": "completed"
+    },
+    {
+      "title": "dsdsdsd",
+      "text": "xcxcxcxc",
+      "state": "not-started",
+      "id": 4
+    },
+    {
+      "title": "as",
+      "text": "asas",
+      "state": "not-started",
+      "id": 5
+    },
+    {
+      "title": "zczxzxzx",
+      "text": "xzxzxzxz",
+      "state": "not-started",
+      "id": 6
+    },
+    {
+      "title": "Read Angular 1 blog",
+      "text": "Shall do at 10.30 pm",
+      "state": "not-started",
+      "id": 7
+    },
+    {
+      "title": "Read Angular 1 blog",
+      "text": "Shall do at 10.30 pm",
+      "state": "not-started",
+      "id": 8
+    },
+    {
+      "title": "Read Angular 1 blog",
+      "text": "Shall do at 10.30 pm",
+      "state": "not-started",
+      "id": 9
+    },
+    {
+      "title": "Read Angular 1 blog",
+      "text": "Shall do at 10.30 pm",
+      "state": "not-started",
+      "id": 10
+    },
+    {
+      "title": "Read Angular 1 blog",
+      "text": "Shall do at 10.30 pm",
+      "state": "not-started",
+      "id": 11
+    },
+    {
+      "title": "Read Angular 1 blog",
+      "text": "Shall do at 10.30 pm",
+      "state": "not-started",
+      "id": 12
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+<label class="error-message"><span *ngIf="submitMessage">{{ submitMessage }}</span></label>
+<div class="login-form">
+<mat-form-field class="login-field">
+  <label>Username: </label>
+  <input type="text" matInput name="username" class="username" [formControl]="username" required/>
+  <mat-error *ngIf="username.invalid">{{getUserNameErrorMessage()}}</mat-error>
+</mat-form-field>
+<mat-form-field class="login-field">
+  <label>Password:</label>
+  <input type="password" matInput name="password" class="password" [formControl]="password" required/>
+  <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+</mat-form-field>
+<div class="registration-btn">
+  <button mat-raised-button (click)="loginSubmit()" color='primary'>Submit</button>
+</div>
+</div>

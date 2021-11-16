@@ -1,0 +1,14 @@
+.keep-c-list-container > label {
+    font-weight: bold;
+    margin: 10px 20px;
+  }
+  .notes-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+  .notes-wrapper > * {
+    flex: 0 0 100%;
+    margin: 10px;
+  }
